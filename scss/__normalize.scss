@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/**
+  Normalize the margin and padding
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
+  HTML & BODY Styles
+ */
+html, body {
+  font-size: 10px;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../image/background.jpg') center center no-repeat;
+}
+
+/**
+  Utility Classes
+ */
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: #ffffff;
+  text-decoration: none;
+  box-shadow: 5px 5px .8em #000000;
+  color: #333333;
+  cursor: pointer;
+}
+
+.btn-login, .btn-registration {
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  color: orange;
+  transition: all 0.4s;
+  border: none;
+  letter-spacing: 0.16rem;
+
+  &:hover {
+    background-color: orange;
+    color: #ffffff;
+  }
+}
+
+.btm-space {
+  height: 3.5rem;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.rfs-0 {
+  margin-bottom: 0;
+}
+
+.error {
+  margin: -0.6rem 0 0.2rem;
+  font-size: 1.4em;
+  color: red;
+}
+
+.success {
+  margin: -0.6rem 0 0.2rem;
+  font-size: 1.4em;
+  color: green;
+}
+
+.register {
+  font-size: 1.6rem;
+  color: red;
+  margin-top: -5rem;
+}
+
+.login {
+  font-size: 1.6rem;
+  color: red;
+}
+
+.lost-password, .newregister {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.lostpassword, .newregister {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.mt-2 {
+  margin-top: 4rem;
+}
+
+
+a:focus, a:active {
+  border: none;
+}
+
+.card {
+  /**
+    Login, Registration, & Forgot Password Card Container
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+
+  .card-heading {
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    margin-top: -4rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 50vh;
+    background: #fff;
+    width: 70rem;
+    border-radius: .5rem;
+    box-shadow: 4px 4px 4px #ddd;
+  }
+}
+
+.form-group {
+  /**
+    Form Styles
+   */
+  width: 100%;
+  position: relative;
+  height: 5rem;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+
+  .form-control-checkbox {
+    /**
+    Checkbox styling for forms
+   */
+    font-size: 1.6rem;
+    color: orange;
+    width: 1.6rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .label-checkbox {
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .form-control {
+    /**
+     Form Control class for styling input fields,
+     maintaining margins between two form-controls, etc.
+    */
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: #444;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    border: none;
+
+    &:focus + .label .content, &:valid + .label .content {
+      transform: translateY(-120%);
+      font-size: 1.2rem;
+      color: orange;
+    }
+
+    &:focus + .label::after, &:valid + .label::after {
+      transform: translateY(0%);
+    }
+  }
+
+  .label {
+    /**
+      Label styling for animation of text to slide upwards
+     */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 3px solid #777777;
+    color: #fff;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-bottom: 3px solid orange;
+      left: 0;
+      transform: translateX(-150%);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .content {
+    position: absolute;
+    bottom: 5px;
+    left: 1rem;
+    transition: all 0.3s ease;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+}
