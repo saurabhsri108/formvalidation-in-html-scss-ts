@@ -11,8 +11,8 @@
 	
 	
 	// Google API configuration
-	const GOOGLE_CLIENT_ID     = '284096022474-e0adkc8gaup09svoo2tvfsj2en561vgh.apps.googleusercontent.com';
-	const GOOGLE_CLIENT_SECRET = 'VvBq3_BdTIAtmjBbumEN4vmV';
+	const GOOGLE_CLIENT_ID     = '';
+	const GOOGLE_CLIENT_SECRET = '';
 	const GOOGLE_REDIRECT_URL  = 'http://localhost/formvalidation/';
 	
 	
